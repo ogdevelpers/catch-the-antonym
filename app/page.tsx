@@ -1,8 +1,23 @@
+'use client';
+
+import { useState } from 'react';
+import DifficultySelection from './components/DifficultySelection';
 import AntonymGame from './components/AntonymGame';
 
-// Force static generation
-export const dynamic = 'force-static';
-
 export default function Home() {
-  return <AntonymGame />;
+  const [selectedDifficulty, setSelectedDifficulty] = useState<'easy' | 'medium' | 'hard' | null>(null);
+
+  const handleDifficultySelect = (difficulty: 'easy' | 'medium' | 'hard') => {
+    setSelectedDifficulty(difficulty);
+  };
+
+  const handleBackToSelection = () => {
+    setSelectedDifficulty(null);
+  };
+
+  if (selectedDifficulty) {
+    return <AntonymGame difficulty={selectedDifficulty} onBackToSelection={handleBackToSelection} />;
+  }
+
+  return <DifficultySelection onSelectDifficulty={handleDifficultySelect} />;
 }

@@ -108,104 +108,257 @@
   justify-content: center;
   min-height: calc(100vh - 130px);
   background: linear-gradient(to bottom right, #9333ea, #2563eb, #4338ca);
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .gameOverContent {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  animation: bounce-in 0.8s ease-out;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 .gameOverTitle {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 900;
   color: white;
-  margin-bottom: 1rem;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: title-bounce 0.8s ease-out;
 }
 
 .gameOverCard {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  max-width: 28rem;
-  /* margin: 0 auto; */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 2rem;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: card-slide-up 0.6s ease-out 0.2s both;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  animation: score-pop 0.8s ease-out 0.4s both;
 }
 
 .score {
-  font-size: 3.75rem;
-  font-weight: bold;
+  font-size: 4.5rem;
+  font-weight: 900;
   color: #fcd34d;
+  line-height: 1;
+  text-shadow: 0 4px 16px rgba(252, 211, 77, 0.6);
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
 }
 
 .scoreLabel {
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .accuracy {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  animation: accuracy-fade-in 0.6s ease-out 0.6s both;
 }
 
 .message {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: message-fade-in 0.6s ease-out 0.8s both;
+}
+
+.message p {
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: message-pulse 2s ease-in-out infinite;
 }
 
 .perfectScore {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: #fcd34d;
-  font-weight: bold;
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(252, 211, 77, 0.5);
 }
 
 .excellent {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #86efac;
-  font-weight: bold;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(134, 239, 172, 0.5);
 }
 
 .goodJob {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #93c5fd;
-  font-weight: bold;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(147, 197, 253, 0.5);
 }
 
 .keepPracticing {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #fdba74;
-  font-weight: bold;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(253, 186, 116, 0.5);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  animation: buttons-fade-in 0.6s ease-out 1s both;
 }
 
 .playAgainButton {
-  margin-top: 1rem;
-  padding: 1.5rem 3rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: white;
   background: linear-gradient(to right, #ec4899, #9333ea);
   border: none;
   border-radius: 9999px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .playAgainButton:hover {
-  transform: scale(1.1);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(236, 72, 153, 0.6);
+}
+
+.playAgainButton:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.changeDifficultyButton {
+  background: linear-gradient(to right, #6366f1, #4338ca);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+.changeDifficultyButton:hover {
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+}
+
+@keyframes title-bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.8);
+  }
+  60% {
+    transform: translateY(10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes card-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes score-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes accuracy-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes message-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes message-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes buttons-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .gameContainer {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 130px);
   background: linear-gradient(to bottom right, #9333ea, #2563eb, #4338ca);
   padding: 1rem;
 }
@@ -214,29 +367,92 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 0 0.5rem;
+  gap: 1.5rem;
 }
 
-.scoreDisplay {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
+.scoreCard,
+.timerCard {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 250px;
+  animation: slide-in 0.5s ease-out;
 }
 
-.scoreValue {
+.scoreCard:hover,
+.timerCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.scoreIcon,
+.timerIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: bounce 2s infinite;
+}
+
+.scoreContent,
+.timerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.scoreLabel,
+.timerLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.scoreValue,
+.timerValue {
+  font-size: 2.5rem;
+  font-weight: 900;
   color: #fcd34d;
+  line-height: 1;
+  text-shadow: 0 2px 8px rgba(252, 211, 77, 0.5);
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.timer {
-  font-size: 1.875rem;
-  font-weight: bold;
-  color: white;
+.timerCard {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.timerValue {
+  color: #60a5fa;
+  text-shadow: 0 2px 8px rgba(96, 165, 250, 0.5);
 }
 
 .timerWarning {
+  background: rgba(248, 113, 113, 0.25);
+  border-color: rgba(248, 113, 113, 0.4);
+  animation: pulse-glow 1s infinite;
+}
+
+.timerWarning .timerValue {
   color: #f87171;
-  animation: pulse 1s infinite;
+  text-shadow: 0 2px 12px rgba(248, 113, 113, 0.8);
+  animation: pulse-scale 1s infinite;
+}
+
+.timerWarning .timerIcon {
+  animation: shake 0.5s infinite;
 }
 
 .gameArea {
@@ -341,6 +557,56 @@
   }
   50% {
     opacity: 0.5;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(248, 113, 113, 0.7);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 20px 10px rgba(248, 113, 113, 0.4);
+  }
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
   }
 }
 
