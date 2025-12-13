@@ -31,13 +31,6 @@ export default function DifficultySelection({ onSelectDifficulty }: DifficultySe
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>
-          🔥 CATCH THE ANTONYM
-        </h1>
-        <h2 className={styles.subtitle}>
-          ADVANCED EDITION
-        </h2>
-        
         <div className={styles.selectionCard}>
           <h3 className={styles.selectTitle}>Select Difficulty Level</h3>
           <p className={styles.selectDescription}>
@@ -57,7 +50,7 @@ export default function DifficultySelection({ onSelectDifficulty }: DifficultySe
                 } as React.CSSProperties}
               >
                 <div className={styles.difficultyHeader}>
-                  <span className={styles.difficultyDot} style={{ backgroundColor: difficulty.color }}>●</span>
+                  <span className={styles.difficultyDot} style={{ color: difficulty.color }}>●</span>
                   <span className={styles.difficultyLabel}>{difficulty.label}</span>
                 </div>
                 <p className={styles.difficultyDescription}>{difficulty.description}</p>
