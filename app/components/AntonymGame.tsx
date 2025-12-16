@@ -253,18 +253,12 @@ export default function AntonymGame({ difficulty, onBackToSelection }: AntonymGa
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <button
-              onClick={startGame}
-              className={styles.playAgainButton}
-            >
-              PLAY AGAIN 🔄
-            </button>
             {onBackToSelection && (
               <button
                 onClick={onBackToSelection}
                 className={`${styles.playAgainButton} ${styles.changeDifficultyButton}`}
               >
-                CHANGE DIFFICULTY ⚙️
+                Done
               </button>
             )}
           </div>

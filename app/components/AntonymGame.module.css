@@ -265,6 +265,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  width: 50%;
 }
 
 .playAgainButton:hover {
