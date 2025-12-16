@@ -34,7 +34,7 @@ export default function DifficultySelection({ onSelectDifficulty }: DifficultySe
         <div className={styles.selectionCard}>
           <h3 className={styles.selectTitle}>Select Difficulty Level</h3>
           <p className={styles.selectDescription}>
-            Choose your challenge level and match as many antonyms as possible in 30 seconds!
+            Choose your challenge level and match as many antonyms as possible in 60 seconds!
           </p>
           
           <div className={styles.difficultyOptions}>

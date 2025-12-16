@@ -55,7 +55,7 @@ interface AntonymGameProps {
 
 export default function AntonymGame({ difficulty, onBackToSelection }: AntonymGameProps) {
   const [gameStarted, setGameStarted] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(60);
   const [score, setScore] = useState(0);
   const [words, setWords] = useState<string[]>([]);
   const [antonyms, setAntonyms] = useState<string[]>([]);
@@ -88,7 +88,7 @@ export default function AntonymGame({ difficulty, onBackToSelection }: AntonymGa
     setGameStarted(true);
     setGameOver(false);
     setScore(0);
-    setTimeLeft(30);
+    setTimeLeft(60);
     setMatchedPairs(new Set());
     setAnimations(new Map());
     
